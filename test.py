@@ -32,7 +32,7 @@ train = pd.read_csv('train.csv')
 test = pd.read_csv('test.csv')
 
 X_train = train.values[:,1:]
-y_train = test.values[:,:1]
+y_train = train.values[:,:1]
 X_test = test.values[:,:]
 
 for af in RandomLayer.activation_func_names():
