@@ -7,6 +7,8 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 from scipy.linalg import pinv2
 
+
+
 train = pd.read_csv('train.csv')
 test = pd.read_csv('test.csv')
 
