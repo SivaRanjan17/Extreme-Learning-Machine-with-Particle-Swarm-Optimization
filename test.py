@@ -23,18 +23,13 @@ print(train.shape)
 
 for i in ['protocol_type', 'service', "flag", "labels"]:
 	values = array(train[i])
-	#print(values)
-	# integer encode
 	label_encoder = LabelEncoder()
 	integer_encoded = label_encoder.fit_transform(values)
-	#print(integer_encoded)
 	train[i] = integer_encoded
-	#print (train[i])
 
 X = train.values[:, :41]
-#print (X)
 y = train.values[:, 41]
-#print (y)
+
 
 # define RFE
 rfe = RFE(estimator=DecisionTreeClassifier(), n_features_to_select=20)
